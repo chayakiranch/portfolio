@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -24,6 +27,17 @@
   color: white;
 }
 
+/* Main content area takes up remaining space */
+main {
+  flex: 1;
+}
+
+/* Footer styling for sticky positioning at bottom */
+footer {
+  margin-top: auto;
+}
+
+/* Link styling */
 .App-link {
   color: #61dafb;
 }

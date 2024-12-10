@@ -1,0 +1,29 @@
+/* Container styles */
+.subheader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navigation styles */
+  .subheader-navigation {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  /* Navigation link styles */
+  .nav-link {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
