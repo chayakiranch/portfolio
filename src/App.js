@@ -7,6 +7,7 @@ import SubHeader from './components/SubHeader'; // Import the SubHeader componen
 import HomePage from './components/HomePage'; // Import the HomePage component
 import SignInPage from './components/SignInPage'; // Import the SignInPage component
 import ResetPasswordPage from './components/ResetPasswordPage'; // Import the ResetPasswordPage component
+import PostsPage from './components/PostPage'; // Import the PostsPage component
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/signin" element={<SignInPage />} />
-            <Route path="/reset-password" element={<ResetPasswordPage />} /> {/* New route for Reset Password */}
-            {/* Add other routes as needed */}
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/posts" element={<PostsPage />} /> {/* Route for the PostsPage */}
           </Routes>
         </main>
 
