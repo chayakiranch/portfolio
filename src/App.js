@@ -1,26 +1,38 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header'; // Import the Header component
 import Footer from './components/Footer'; // Import the Footer component
 import SubHeader from './components/SubHeader'; // Import the SubHeader component
+import HomePage from './components/HomePage'; // Import the HomePage component
+import SignInPage from './components/SignInPage'; // Import the SignInPage component
+import ResetPasswordPage from './components/ResetPasswordPage'; // Import the ResetPasswordPage component
+import PostsPage from './components/PostPage'; // Import the PostsPage component
 
 function App() {
   return (
-    <div className="App">
-      {/* Header section */}
-      <Header />
-      
-      {/* SubHeader navigation section */}
-      <SubHeader />
-      
-      {/* Main content of your app */}
-      <main>
-        {/* Add main content here */}
-      </main>
-      
-      {/* Footer section */}
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        {/* Header section */}
+        <Header />
+
+        {/* SubHeader navigation section */}
+        <SubHeader />
+
+        {/* Main content of your app */}
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/signin" element={<SignInPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/posts" element={<PostsPage />} /> {/* Route for the PostsPage */}
+          </Routes>
+        </main>
+
+        {/* Footer section */}
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
