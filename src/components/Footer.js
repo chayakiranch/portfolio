@@ -19,7 +19,13 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2024 Neo Kim • <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Collection notice</a></p>
+      <p>
+  © 2024 Neo Kim • 
+  <a href="/privacy-policy">Privacy</a> • 
+  <a href="/terms-of-service">Terms</a> • 
+  <a href="/collection-notice">Collection notice</a>
+  {/* Replace href values with actual URLs once they are available */}
+</p>
         <div className="footer-buttons">
           <button onClick={handleStartWritingClick}>Start Writing</button>
           <button>Get the app</button>

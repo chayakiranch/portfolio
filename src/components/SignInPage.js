@@ -10,6 +10,13 @@ const SignInPage = () => {
     setShowPasswordField(true);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can add logic to handle form submission, like API calls for authentication
+    // For now, just navigate to the home page after submission
+    navigate('/home'); // Redirect to the homepage or a protected route
+  };
+
   return (
     <div className="signin-container">
       {/* Logo that links to the home page */}
@@ -19,7 +26,7 @@ const SignInPage = () => {
 
       <h1>Sign in to System Design Newsletter</h1>
 
-      <form className="signin-form">
+      <form className="signin-form" onSubmit={handleSubmit}> {/* Ensure handleSubmit is connected */}
         <input type="email" placeholder="Email" required />
         {showPasswordField && <input type="password" placeholder="Password" required />}
         
